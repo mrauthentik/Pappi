@@ -35,6 +35,7 @@ export function Hero({ scrollY }: HeroProps) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-3">
+              <a href="/files/Umoke Uchenna Praise CV.pdf" download="Umoke_Uchenna_Praise_CV.pdf">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-200"
@@ -42,7 +43,7 @@ export function Hero({ scrollY }: HeroProps) {
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
               </Button>
-
+          </a>
               <div className="flex gap-4">
                 <Button
                   variant="outline"
