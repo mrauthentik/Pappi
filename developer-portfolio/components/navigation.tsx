@@ -74,7 +74,7 @@ export function Navigation() {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white/80 hover:text-white"
+              className="text-white/80 hover:text-black transition-colors duration-200 hover:scale-305 transform"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -83,7 +83,7 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-black/90 backdrop-blur-md rounded-lg mt-2 p-4">
+          <div className="md:hidden bg-blue/40 backdrop-blur-md rounded-lg mt-2 p-4">
             {navItems.map((item) => (
               <a
                 key={item.href}
