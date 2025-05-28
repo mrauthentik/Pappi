@@ -34,7 +34,7 @@ export function Projects({ scrollY }: ProjectsProps) {
         "An NGO website in Nigeria.",
       tech: ["React.js", "Framer Motion", "CSS"],
       github: "https://github.com/mrauthentik",
-      live: "zenama.ng",
+      live: "https://zenama.ng",
       gradient: "from-pink-500 to-red-600",
     },
      {
@@ -43,7 +43,7 @@ export function Projects({ scrollY }: ProjectsProps) {
         "A Fashion House website.",
       tech: ["React.js", "Framer Motion", "CSS"],
       github: "https://github.com/mrauthentik",
-      live: "alaranafrica.com",
+      live: "https://alaranafrica.com",
       gradient: "from-pink-500 to-red-600",
     },
   ]
