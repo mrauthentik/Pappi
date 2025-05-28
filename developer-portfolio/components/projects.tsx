@@ -26,7 +26,7 @@ export function Projects({ scrollY }: ProjectsProps) {
       tech: ["React", "TypeScript", "GitHub API", "Material UI"],
       github: "https://github.com/mrauthentik/Github-repo-explorer",
       live: "https://github-repo-explorer-rust.vercel.app",
-      gradient: "from-purple-500 to-pink-600",
+      gradient: "from-green-500 to-white-600",
     },
     {
       title: "Zenama Website",
@@ -44,7 +44,7 @@ export function Projects({ scrollY }: ProjectsProps) {
       tech: ["React.js", "Framer Motion", "CSS"],
       github: "https://github.com/mrauthentik",
       live: "https://alaranafrica.com",
-      gradient: "from-pink-500 to-red-600",
+      gradient: "from-purple-500 to-cyan-600",
     },
   ]
 
