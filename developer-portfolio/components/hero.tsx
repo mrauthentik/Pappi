@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Download, Github, Linkedin, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
@@ -8,7 +9,36 @@ interface HeroProps {
   scrollY: number
 }
 
+const titles = [
+  "Pixel Perfect Front-End Developer",
+  "Creativity at its Peak",
+  "React & TypeScript Bound",
+  "Ideas to Life",
+  "FireLord 🔥",
+  "Clean Codes",
+]
+
+
 export function Hero({ scrollY }: HeroProps) {
+
+   const [index, setIndex] = useState(0)
+  const [fade, setFade] = useState(true)
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setFade(false), 1800)
+    const interval = setInterval(() => {
+      setFade(true)
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % titles.length)
+        setFade(false)
+      }, 200)
+    }, 2500)
+    return () => {
+      clearInterval(interval)
+      clearTimeout(timeout)
+    }
+  }, [])
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/20 to-transparent" />
@@ -21,12 +51,15 @@ export function Hero({ scrollY }: HeroProps) {
           {/* Left Column - Text Content */}
           <div className="space-y-8 order-2 lg:order-1">
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent animate-fade-in">
-                UCHE
+              <h1 className="text-5xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent animate-fade-in">
+               Hi am Uche,
               </h1>
 
-              <p className="text-xl md:text-2xl text-white/80 animate-fade-in-delay-1">
-                Pixel Perfect Front-End Developer
+               <p
+                className={`text-xl md:text-5xl text-white/80 transition-opacity duration-2000 ${fade ? "opacity-0" : "opacity-100"}`}
+                key={titles[index]}
+              >
+                {titles[index]}
               </p>
 
               <p className="text-lg text-white/60 max-w-lg animate-fade-in-delay-2">
