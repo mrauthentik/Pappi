@@ -51,12 +51,12 @@ export function Hero({ scrollY }: HeroProps) {
           {/* Left Column - Text Content */}
           <div className="space-y-8 order-2 lg:order-1">
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent animate-fade-in">
+              <h1 className="text-2xl md:text-xl font-bold text-white/80 animate-fade-in">
                Hi am Uche,
               </h1>
 
                <p
-                className={`text-xl md:text-5xl text-white/80 transition-opacity duration-2000 ${fade ? "opacity-0" : "opacity-100"}`}
+                className={`text-5xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent  transition-opacity duration-2000 ${fade ? "opacity-0" : "opacity-100"}`}
                 key={titles[index]}
               >
                 {titles[index]}
